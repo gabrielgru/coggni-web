@@ -1,53 +1,4 @@
-# SETUP Y PROMPT PARA CLAUDE CODE - COGGNI LANDING
-
-## PASO 1: COMANDOS DE TERMINAL (Ejecutar primero en WSL)
-
-```bash
-# Navegar al proyecto
-cd /home/gagru/projects/Coggni/projects/coggni-web
-
-# Inicializar Next.js 15 con TypeScript y Tailwind
-npx create-next-app@latest . --typescript --tailwind --app --eslint --no-src-dir
-
-# Responder a las preguntas:
-# ✓ Would you like to use TypeScript? Yes
-# ✓ Would you like to use ESLint? Yes
-# ✓ Would you like to use Tailwind CSS? Yes
-# ✓ Would you like to use `src/` directory? No
-# ✓ Would you like to use App Router? Yes
-# ✓ Would you like to customize the default import alias? No
-
-# Instalar shadcn/ui
-npx shadcn@latest init
-
-# Responder a las preguntas:
-# ✓ Which style? Default
-# ✓ Which color? Slate (lo personalizaremos después)
-# ✓ Do you want to use CSS variables? Yes
-
-# Instalar componentes shadcn/ui necesarios
-npx shadcn@latest add button card badge separator avatar
-
-# Instalar librerías adicionales
-npm install framer-motion lucide-react
-
-# Configurar Git y conectar con GitHub
-git init
-git add .
-git commit -m "Initial Next.js setup with shadcn/ui"
-
-# Crear repo en GitHub (si no lo has hecho)
-gh repo create coggni-web --public --source=. --remote=origin --push
-
-# Si ya creaste el repo manualmente, hacer:
-git remote add origin https://github.com/TU_USUARIO/coggni-web.git
-git branch -M main
-git push -u origin main
-```
-
----
-
-## PASO 2: PROMPT PARA CLAUDE CODE (Copiar y pegar completo)
+PROMPT PARA CLAUDE CODE
 
 ```
 Eres un diseñador UI/UX senior especializado en landing pages B2B SaaS profesionales. Vamos a crear la landing page de Coggni.io con el más alto estándar de calidad visual.
@@ -102,89 +53,108 @@ OPTIMIZACIONES OBLIGATORIAS:
 ═══════════════════════════════════════════════════════
 📐 ESTRUCTURA DE LA LANDING PAGE
 ═══════════════════════════════════════════════════════
+# Landing Page Coggni – Versión Final
 
-1. HERO SECTION (Above the fold)
-   - Headline potente: "Automatiza tu cobranza B2B con inteligencia"
-   - Subheadline: "Recordatorios profesionales por WhatsApp, SMS y Email que mejoran tu flujo de caja"
-   - CTA Principal: "Agenda demo" (botón destacado)
-   - CTA Secundario: "Ver demo" (botón outline)
-   - Visual: Mockup/ilustración del dashboard (puedes usar placeholder elegante)
-   - Badge: "Trusted by 50+ PYMES" o similar
-   
-   DISEÑO HERO:
-   - Background: Gradiente sutil con Cavern Pink + Tide
-   - Glassmorphism card conteniendo el copy
-   - Elementos decorativos: Líneas onduladas/curvas sutiles
-   - Responsivo: Stack vertical en mobile, lado a lado en desktop
+## 1. HERO SECTION (Above the fold)
+**Headline:**  
+Automatizamos tu cobranza y comunicación con clientes
 
-2. SOCIAL PROOF SECTION
-   - Logos de clientes (3-5) en escala de grises
-   - Estadística destacada: "95% de mejora en tiempo de cobranza"
-   - Layout: Centrado, minimalista
+**Subheadline:**  
+Recordatorios automáticos por WhatsApp, SMS y Email para que cobres antes y trabajes menos.
 
-3. PROBLEMA + SOLUCIÓN
-   - Título: "La cobranza no debería ser manual"
-   - 3 Pain Points (iconos + texto):
-     • Tiempo perdido en seguimiento
-     • Comunicación inconsistente
-     • Pérdida de ventas por olvidos
-   - Transición visual a la solución
+**CTAs:**  
+- [Agenda una demo] (botón destacado)  
+- [Ver cómo funciona] (botón outline)  
 
-4. FEATURES SECTION
-   - Título: "Todo lo que necesitas para cobrar profesionalmente"
-   - 3 Features principales (grid):
-     
-     A) Automatización Inteligente
-        - Icono: Zap o Bot
-        - Descripción: "Envíos automáticos basados en fechas de vencimiento"
-        - Detalle: WhatsApp, SMS, Email en un solo flujo
-     
-     B) Personalización Total
-        - Icono: Palette o Edit
-        - Descripción: "Mensajes adaptados a tu marca y tono"
-        - Detalle: Templates customizables con variables dinámicas
-     
-     C) Dashboard en Tiempo Real
-        - Icono: BarChart o Activity
-        - Descripción: "Visualiza el estado de todas tus cobranzas"
-        - Detalle: Métricas, reportes, y seguimiento centralizado
-   
-   DISEÑO FEATURES:
-   - Cards con hover effect (elevación + cambio de color sutil)
-   - Iconos en círculos con gradiente
-   - Spacing generoso entre cards
+**Visual:**  
+Mockup/ilustración del flujo de recordatorios o reportes (placeholder elegante)
 
-5. HOW IT WORKS (3 pasos)
-   - Diseño: Timeline horizontal con números grandes
-   - Paso 1: "Conecta tus datos" (icono: Link)
-   - Paso 2: "Configura recordatorios" (icono: Settings)
-   - Paso 3: "Cobra automáticamente" (icono: CheckCircle)
+**Diseño Hero:**  
+- Background: Gradiente sutil con Cavern Pink + Tide  
+- Glassmorphism card conteniendo el copy  
+- Elementos decorativos: Líneas onduladas/curvas abstractas (inspiración cerebro, sutil)  
+- Responsivo: Stack vertical en mobile, lado a lado en desktop  
 
-6. TESTIMONIALS
-   - 2-3 testimonios en cards
-   - Incluir: Avatar, nombre, cargo, empresa, quote
-   - Diseño: Grid o carousel sutil
+---
 
-7. PRICING (Opcional - si lo quieres simple)
-   - 2 Planes:
-     • Starter: Para comenzar
-     • Professional: Para equipos
-   - Features bullet points
-   - CTA: "Comenzar ahora"
+## 2. PROBLEMA + SOLUCIÓN
+**Título:**  
+La comunicación de las pymes merece ser profesional y automática
 
-8. FINAL CTA SECTION
-   - Background: Gradiente suave con Martini + Cavern Pink
-   - Headline: "¿Listo para automatizar tu cobranza?"
-   - Subheadline: "Agenda una demo personalizada"
-   - CTA grande y destacado
-   - Nota: "Sin tarjeta de crédito. Setup en 5 minutos."
+**Pain Points (iconos + texto):**  
+- **Seguimiento desgastante y poco eficiente** → Horas de trabajo administrativo que no agregan valor.  
+- **Mensajes improvisados e informales** → Comunicación desordenada que afecta la relación con clientes.  
+- **Flujo de caja imprevisible** → Facturas atrasadas porque nadie las recuerda a tiempo.  
 
-9. FOOTER
-   - Logo Coggni
-   - Links: Producto, Casos de uso, Precios, Blog, Contacto
-   - Legal: Privacidad, Términos
-   - Social: LinkedIn, Twitter/X
-   - Copyright: "© 2025 Coggni. Todos los derechos reservados."
+**Transición visual a la solución:**  
+Con Coggni, las pymes automatizan recordatorios profesionales por WhatsApp, SMS y Email — sin ERP ni proyectos largos de integración.
+
+---
+
+## 3. FEATURES SECTION
+**Título:**  
+Todo lo que necesitas para cobrar profesionalmente
+
+**Features principales (grid):**
+
+### A) Automatización Inteligente
+- **Icono:** Zap/Bot  
+- **Descripción:** Recordatorios automáticos basados en fechas de vencimiento.  
+- **Detalle:** WhatsApp, SMS y Email en un solo flujo.  
+
+### B) Personalización Total
+- **Icono:** Palette/Edit  
+- **Descripción:** Mensajes adaptados a tu marca y tono.  
+- **Detalle:** Templates customizables con variables dinámicas.  
+
+### C) Reportes y Analítica Profesional
+- **Icono:** BarChart/Activity  
+- **Descripción:** Información clara para entender y mejorar tu cobranza.  
+- **Detalle:** Métricas simples, reportería centralizada y seguimiento consolidado.  
+
+**Diseño Features:**  
+- Cards con hover effect (elevación + color sutil)  
+- Iconos en círculos con gradiente  
+- Spacing generoso entre cards  
+
+---
+
+## 4. HOW IT WORKS (3 pasos)
+**Título:**  
+Empieza en minutos
+
+**Diseño:**  
+Timeline horizontal con números grandes
+
+**Pasos:**  
+1. **Conecta tus datos** (icono: Link)  
+2. **Configura recordatorios** (icono: Settings)  
+3. **Cobra automáticamente** (icono: CheckCircle)  
+
+---
+
+## 5. FINAL CTA SECTION
+**Background:**  
+Gradiente suave con Martini + Cavern Pink  
+
+**Headline:**  
+¿Listo para automatizar tu cobranza?
+
+**Subheadline:**  
+Agenda una demo personalizada
+
+**CTA:**  
+[Agenda tu demo] (botón grande y destacado)
+
+---
+
+## 6. FOOTER
+- Logo Coggni  
+- Links: Producto, Casos de uso, Contacto  
+- Legal: Privacidad, Términos  
+- Social: LinkedIn  
+- Copyright: © 2025 Coggni. Todos los derechos reservados.
+
 
 ═══════════════════════════════════════════════════════
 🎯 CONFIGURACIÓN TAILWIND (ACTUALIZAR)
@@ -280,19 +250,17 @@ components/
 ├── ui/                      (shadcn/ui components)
 ├── sections/
 │   ├── Hero.tsx
-│   ├── SocialProof.tsx
 │   ├── Features.tsx
 │   ├── HowItWorks.tsx
-│   ├── Testimonials.tsx
-│   ├── Pricing.tsx
 │   ├── FinalCTA.tsx
 │   └── Footer.tsx
 ├── shared/
 │   ├── Navbar.tsx
 │   └── CTAButton.tsx
 public/
-├── logo.svg                 (puedes crear placeholder)
+├── logo.svg                 (ya esta este archivo)
 └── images/                  (screenshots, mockups)
+
 
 ═══════════════════════════════════════════════════════
 🚀 INSTRUCCIONES DE IMPLEMENTACIÓN
@@ -367,34 +335,5 @@ Empieza por:
 ```
 
 ---
-
-## PASO 3: DESPUÉS DE IMPLEMENTAR
-
-```bash
-# Ver el sitio localmente
-npm run dev
-# Abrir: http://localhost:3000
-
-# Cuando esté listo, hacer commit y push
-git add .
-git commit -m "Landing page Coggni v1"
-git push origin main
-
-# Conectar con Vercel:
-# 1. Ir a vercel.com/new
-# 2. Importar el repo coggni-web
-# 3. Deploy
-# 4. Configurar dominio coggni.io en Vercel
-# 5. Actualizar DNS en Cloudflare
-```
-
----
-
-## NOTAS IMPORTANTES
-
-- **Itera con Claude Code**: Pide screenshots de cada sección y compara con referencias
-- **No te conformes**: Si algo no se ve profesional, pide mejoras específicas
-- **Usa referencias**: "Haz esta sección como la de Linear.app pero con nuestra paleta"
-- **Mobile first**: Prueba en móvil constantemente
 
 **El resultado debe ser visualmente impresionante. Si no lo es, iteramos hasta lograrlo.**
