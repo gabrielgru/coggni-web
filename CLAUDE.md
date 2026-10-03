@@ -11,3 +11,4 @@ Sitio estático de marketing de Coggni. Ver README.md para la estructura.
 - Nunca usar el guion largo (em dash) en textos.
 - Antes de hacer push, verificar visualmente en desktop (1440px) y mobile (390px).
 - Colores y tipografía: tokens en `:root` de `assets/css/styles.css`.
+- Al cambiar `styles.css` o `main.js`, subir el número de versión `?v=N` en los HTML que los referencian (el navegador los cachea 1 día).
