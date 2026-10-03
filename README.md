@@ -23,7 +23,9 @@ Reemplaza al sitio en Framer (dado de baja en octubre 2026). Réplica del diseñ
 
 - **No cambiar las URLs `/privacy` y `/terms`**: están registradas en Meta (App Review WhatsApp) y Twilio.
 - Cloudflare Pages sirve `privacy.html` como `/privacy` automáticamente.
-- Analytics: Cloudflare Web Analytics, activado desde el panel de Pages (no requiere código).
+- Analytics: Cloudflare Web Analytics del dominio coggni.io (Cloudflare inyecta el script solo; no agregarlo al código o se duplican las visitas).
+- Dominio: `coggni.io` apunta a este proyecto. `www` y cualquier subdominio desconocido redirigen a coggni.io mediante Redirect Rules de la zona (no desde este repo).
+- Search Console: propiedad `coggni.io` en la cuenta gabriel@coggni.io, sitemap enviado.
 - Agenda: Calendly embebido (`calendly.com/coggni/30min`).
 
 ## Desarrollo local
