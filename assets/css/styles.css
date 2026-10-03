@@ -232,11 +232,19 @@ h1, h2, h3, p { margin: 0; }
 .footer-bottom { border-top: 1px solid var(--line); text-align: center; padding: 50px 0 30px; font-size: 14.5px; color: var(--text); }
 
 /* ---------- Animación de entrada ---------- */
+/* Hero: igual al sitio Framer. Texto sube 150px (delay 0.5s); tarjetas escalan desde 0.5 y suben 50px (delay 0.7s). */
+@keyframes coggni-up { from { opacity: 0; transform: translateY(150px); } to { opacity: 1; transform: none; } }
+@keyframes coggni-pop { from { opacity: 0; transform: translateY(50px) scale(0.5); } to { opacity: 1; transform: none; } }
+.anim-up { animation: coggni-up 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both; }
+.anim-pop { animation: coggni-pop 1s cubic-bezier(0.22, 1, 0.36, 1) 0.7s both; }
+.hero-title, .hero-action { will-change: transform; }
+
 .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
 .js .reveal.is-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js .reveal, .how-panel img { transition: none; }
+  .anim-up, .anim-pop { animation: none; }
 }
 
 /* ---------- Responsive ---------- */

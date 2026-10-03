@@ -23,7 +23,7 @@
   // "Cómo funciona": pasos que rotan solos y responden al click
   var steps = Array.prototype.slice.call(document.querySelectorAll(".step"));
   var imgs = Array.prototype.slice.call(document.querySelectorAll(".how-panel img"));
-  var current = 0, timer = null, INTERVAL = 4500;
+  var current = 0, timer = null, INTERVAL = 3000;
   function show(i) {
     current = i;
     steps.forEach(function (s, k) { s.classList.toggle("is-active", k === i); });
